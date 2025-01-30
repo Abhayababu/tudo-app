@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Flask To-Do List</title>
+</head>
+<body>
+    <div class="container">
+    <h1>To-Do List</h1>
+    <form method="POST" action="/add">
+        <input type="text" name="todo" placeholder="new task" required>
+        <button type="submit">Add</button>
+    </form>
+    <ul>
+        {% for todos in todo %}
+        <li class="{% if todos.completed %} completed {% endif %}">
+            <span>{{ todos.name }}</span>
+            <form class="form2" action="/edit/{{ todos.id }}" method="POST" style="display:inline">
+                <input type="text" name="edit" placeholder="edit task" required>
+                <button type="submit">Save</button>
+            </form>
+            <a href="/delete/{{ todos.id }}" class="icon"style="color: rgb(14, 4, 4)"><i class="fa-solid fa-trash"></i></a>
+            <a href="/toggle/{{ todos.id }}" class="icon" style="color:rgb(6, 63, 16)"><i class="fa-solid fa-check"></i></a>
+        </li>
+        {% endfor %}
+    </ul>
+    </div>
+</body>
+</html>
