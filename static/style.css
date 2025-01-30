@@ -1,18 +1,18 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #97a6b8;
-    color: #631151;
+    background-color: #8b5b84;
+    color: #2014cce3;
     margin: 0;
     padding: 0;
 }
 .container{
-    background-color: rgb(199, 146, 146);
+    background-color: rgb(201, 174, 197);
     width: 600px;
     margin: 50px  auto;
 }
 h1 {
     text-align: center;
-    color: #d110a1;
+    color: #441a86;
 }
 
 form {
@@ -35,9 +35,9 @@ input[type="text"] {
 button {
     padding: 10px 20px;
     border: none;
-    background-color: #5cb85c;
+    background-color: #383e91;
     color: white;
-    border-radius: 5px;
+    border-radius: 40px;
     cursor: pointer;
 }
 
@@ -54,7 +54,7 @@ li {
     display: flex;
     justify-content: center;
     padding: 10px;
-    border-bottom: 1px solid #3e2597;
+    border-bottom: 1px solid #137a32;
 }
 
 li.completed {
